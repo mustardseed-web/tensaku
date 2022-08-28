@@ -22,13 +22,15 @@ use Illuminate\Support\Facades\Route;
 // })->middleware(['auth'])->name('dashboard');
 
 
+Route::get('/create', function () {
+  return view('resources/views/yoyaku/create.blade.php');
+})->middleware(['auth'])->name('register');
+
 Route::get('/', function () {
     return view('register');
 })->middleware(['auth'])->name('register');
 
-Route::get('/create', function () {
-    return view('/yoyaku/create');
-})->middleware(['auth'])->name('register');
+
 
 require __DIR__.'/auth.php';
 

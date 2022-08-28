@@ -66,8 +66,8 @@
   <label for="password_confirm" class="col-md-4 col-form-label text-md-end">{{ __('パスワード（確認用）') }}</label>
 
   <div class="col-md-6">
-    <input id="password_confirm" type="text" class="form-control @error('password_confirm') is-invalid @enderror"
-      name="password_confirm" value="{{ old('password_confirm') }}" required autocomplete="password" autofocus>
+    <input id="password_confirm" type="text" class="form-control @error('password_confirm') is-invalid @enderror" name="password_confirm"
+      value="{{ old('password_confirm') }}" required autocomplete="password" autofocus>
 
     @error('password_confirm')
     <span class="invalid-feedback" role="alert">
