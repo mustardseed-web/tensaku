@@ -14,8 +14,8 @@ class AddColumnRoleToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-          $table->string('role')->after('name');
-          $table->string('club')->after('role')->nullable();
+          $table->string('role')->after('name')->default('user');
+          $table->string('club')->after('role')->default('admin');
         });
     }
 
